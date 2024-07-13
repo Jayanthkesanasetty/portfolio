@@ -88,6 +88,13 @@ body{
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
 }
+.home-content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            opacity: 0;
+            animation: slideBottom 1s ease forwards;
+            animation-delay: .7s;
+        }
 .home-content h3 span{
     color:#0ef;
 }
@@ -125,7 +132,7 @@ body{
     /* box-shadow: 0 0 5px #0ef,
     0 0 25px #0ef; */
 }
-.home-sci a:hover{
+.home-scl a:hover{
     background: #0ef;
     color: #081b29;
     box-shadow: 0 0 20px #0ef;
@@ -143,13 +150,12 @@ body{
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef;
+    box-shadow: 0 0 5px #0ef,0 0 25px #0ef;
 }
 .btn-box:hover{
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan,;
+    0 0 100px cyan, 0 0 200px cyan;
 }
 
 .about{
@@ -157,7 +163,10 @@ body{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem; */
-    margin-left: 700px;
+    /* margin-left: 700px; */
+    margin-left: 10%;
+    margin-right: 10%;
+        text-align: center;
 }
 /* .about-img img{
     padding-bottom: 20%;
@@ -167,6 +176,7 @@ body{
     border-radius: 8px;
 } */
 .about-text h2{
+    
     font-size: 60px;
 }
 .about-text h2 span{
@@ -180,22 +190,24 @@ body{
     margin: 15px 0 30px;
 }
 .about-text p{
+    
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-right: 80px;
     margin-bottom: 4rem
 }
-#services{
+/* #services{
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
-}
+} */
 .sub-title{
-    text-align: center;
+    text-align:justify;
     font-size: 60px;
     padding-top: 40px;
+   margin-left: 160px;
     padding-bottom: 10px;
 }
 .sub-title span{
@@ -414,6 +426,9 @@ section{
     stroke-linecap: round;
     animation: animate-bar 1s linear forwards;
 }
+.radial-bar >.text{
+    padding-right: 130px;
+}
 
 @keyframes animate-bar{
     100%{
@@ -567,11 +582,13 @@ section{
     gap: 3rem;
     padding-left: 50px;
     margin-top: 80px;
+    margin-left: 110px;
 }
 .contact-text h2{
     font-size: 70px;
     line-height: 1;
     text-align: start;
+    padding: 20px 0;
 }
 .contact-text h2 span{
     color: #0ef;
@@ -749,14 +766,81 @@ section{
 }
 
 .resume{
-    margin:50px 50px;
+    margin-left: 160px;
 }
+.menu-toggle{
+    display: none;
+}
+@media (max-width: 768px) {
+            .header {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .navbar {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .navbar a {
+                text-align:justify;
+                margin: 10px;
+            }
+            .navbar.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display:block;
+                cursor: pointer;
+                font-size: 20px;
+                color: #fff;
+                padding: 10px;
+            }
+            .home {
+                padding: 100px 20px 50px;
+                height: auto;
+            }
+            .home-content h3, .home-content h1, .home-content p {
+                font-size: 22px;
+            }
+            .home-content h1 {
+                font-size: 36px;
+            }
+            .home-content p {
+                font-size: 16px;
+            }
+            .services-list {
+                grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+            }
+            .container1 {
+                margin-right: 60px;
+                padding: 20px;
+            }
+            .about-text >p{
+                width: 100%;
+                font-size: medium;
+            }
+            .radial-bars{
+                padding-right: 30px;
+            }
+            .radial-bar > .text{
+                padding-right: 40px;
+            }
+            .resume{
+                margin-left: 80px;
+            }
+            .contact{
+                margin-left: 30px;
+            }
+            .sub-title{
+                margin-left: 80px;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">My Portfolio</a>
-
+        <span class="menu-toggle"><i class='bx bx-menu'></i></span>
         <nav class="navbar">
             <a href="#home" style="--i:1" class="active">Home</a>
             <a href="#aboutme" style="--i:2">About</a>
@@ -857,7 +941,7 @@ section{
             </div>
         </div>
 
-        <div class="container1">
+        <div class="container1" >
             <h1 class="heading1">Professional Skills</h1>
             <div class="radial-bars">
                 <div class="radial-bar">
@@ -901,7 +985,7 @@ section{
     </section>
 <div class="resume">
     <h1 id="res">Resume</h1>
-    <span style="font-size: 50px;">&#9755;</span> <a href="./JayanthK.pdf.pdf" style="text-decoration: none; color: white; font-size: xx-large;" class="res">Click to View Resume</a>
+    <span style="font-size: 50px;">&#9755;</span> <a href="Jayanth.k.pdf" style="text-decoration: none; color: white; font-size: xx-large;" class="res">Click to View Resume</a>
 </div>
     <!-- <section>
         <div class="portfolio" id="project">
@@ -1009,6 +1093,9 @@ section{
     backDelay : 1000,
     loop : true
 });
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.navbar').classList.toggle('show');
+        });
     </script>
 </body>
 </html>
